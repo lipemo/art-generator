@@ -4,8 +4,20 @@ button{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 1vh;
+  bottom: 2vh;
   cursor: pointer;
+  background: #ffe23b;
+  border: none;
+  border-bottom: solid 5px #d48b1d;
+  font-weight: 600;
+  font-size: 1.2em;
+  border-radius: 10px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  transition: .2s;
+}
+button:active{
+  transform: translateX(-50%) scale(.95);
 }
 
 main{

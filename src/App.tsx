@@ -14,7 +14,9 @@ const App: React.FC = () => {
 
   useEffect(()=>{
     if(isSaving){
-      exportComponentAsJPEG(ref);
+      exportComponentAsJPEG(ref, {
+        fileName:"eu-dei-feat-com-a-dafiti"
+      });
       setisSaving(false);
     }
   },[
@@ -25,7 +27,7 @@ const App: React.FC = () => {
       <main>
         <FeatBF ref={ref} isSaving={isSaving}/>
       </main>
-      <button onClick={() => saveArt()}>Salvar arte</button>
+      <button type="button" onClick={() => saveArt()}>Salvar arte</button>
     </>
   );
 }
