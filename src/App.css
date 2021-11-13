@@ -1,0 +1,181 @@
+button{
+  width: 50%;
+  max-width: 250px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1vh;
+  cursor: pointer;
+}
+
+main{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  max-height: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: .2s;
+}
+
+.fullName{
+  position: absolute;
+  left: 63%;
+  bottom: 50%;
+  text-transform: uppercase;
+  color: #FFF;
+  pointer-events: none;
+  font-size: 2.4em;
+  width: 30%;
+  display: table-cell;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+textarea{
+  position: absolute;
+  left: 61%;
+  bottom: 49%;
+  height: auto;
+  border:dashed 3px transparent;
+  background:none;  
+  outline: none;
+  width: 30%;
+  max-width: 30%;
+  max-height: 35%;
+  height: 21%;
+  resize: none;
+  color: transparent;
+  text-align: left;  
+  overflow: hidden;  
+}
+textarea::selection {
+  background-color: transparent;
+}
+
+textarea:invalid{
+  border:dashed 3px #ff3b3b
+}
+textarea:focus:invalid{
+  border:dashed 3px #ffe23b
+}
+
+textarea:focus:required:valid{
+  border:dashed 3px #52ff3b
+}
+textarea:not(:focus):valid{
+  border:dashed 3px transparent;
+}
+
+
+input[type="file"]{
+  position: absolute;
+  left: -12.9%;
+  top: 9.7%; 
+  border-radius: 500px;
+  width: 69.3%;
+  height: 69.3%;
+  cursor: pointer;
+  opacity: 0;
+  
+}
+
+
+.avatar{
+  background: url('./assets/avatarDefault.png') center center no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  position: absolute;
+  left: -12.9%;
+  top: 9.7%; 
+  border-radius: 500px;
+  width: 69.3%;
+  height: 69.3%;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.dashedAvatar{
+  background-size: cover;
+  object-fit: cover;
+  position: absolute;
+  left: -14%;
+  top: 8%; 
+  border-radius: 500px;
+  width: 71%;
+  height: 71%;
+  cursor: pointer;
+  pointer-events: none;
+  border:dashed 3px #ff3b3b;
+}
+
+.nameTip,
+.avatarTip{
+  position: absolute;
+  background: #ffe23b;
+  padding: 2px 6px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.nameTip:after,
+.avatarTip:after{
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  background: #ffe23b;
+  transform: rotateZ(-45deg) translateX(-50%); 
+}
+
+.nameTip{
+  left: 67%;
+  bottom: 76%
+}
+
+.avatarTip{
+  left: 10%;
+  top: 2%
+}
+
+input[type="file"]:valid ~ .dashedAvatar{
+  border:none
+}
+
+input[type="file"]:valid ~ .avatarTip{
+  display: none;
+}
+
+textarea:not(:focus):valid ~ .nameTip{
+  display: none;
+}
+
+textarea:not(:focus):valid ~ .nameTip{
+  display: none;
+}
+  
+
+.art{
+  width: 100%;
+}
+.sArt{  
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+@media only screen and (device-width:728px),
+only screen and (max-width:728px) {
+  main {
+    width: 90%;
+  }
+}

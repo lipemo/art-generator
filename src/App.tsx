@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import React, { useRef, useCallback, useState, useEffect } from 'react';
 import logoDFT from './assets/logoDFT.png';
 import FeatBF from './arts/featbf';
 import { exportComponentAsJPEG } from 'react-component-export-image';
@@ -6,15 +6,27 @@ import './App.css';
 
 const App: React.FC = () => {
   const ref:any = useRef();
+  const [isSaving, setisSaving] = useState(false);
 
-  return (
-    <div className="App">
-      
-      <FeatBF ref={ref} />
-      <button onClick={() => exportComponentAsJPEG(ref)}>
-        Export As JPEG
-      </button>
-    </div>
+  const saveArt = useCallback(()=>{
+    setisSaving(true);    
+  },[isSaving]);
+
+  useEffect(()=>{
+    if(isSaving){
+      exportComponentAsJPEG(ref);
+      setisSaving(false);
+    }
+  },[
+    isSaving
+  ]);
+    return (
+    <>
+      <main>
+        <FeatBF ref={ref} isSaving={isSaving}/>
+      </main>
+      <button onClick={() => saveArt()}>Salvar arte</button>
+    </>
   );
 }
 
