@@ -1,14 +1,12 @@
 import { useRef } from 'react';
-import logo from './logo.svg';
+import logoDFT from './assets/logoDFT.png';
 import FeatBF from './arts/featbf';
-import { exportComponentAsJPEG, exportComponentAsPDF, exportComponentAsPNG } from 'react-component-export-image';
-
+import { exportComponentAsJPEG } from 'react-component-export-image';
 import './App.css';
 
-function App() {
-
+const App: React.FC = () => {
   const ref:any = useRef();
-  
+
   return (
     <div className="App">
       
@@ -16,20 +14,6 @@ function App() {
       <button onClick={() => exportComponentAsJPEG(ref)}>
         Export As JPEG
       </button>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }
