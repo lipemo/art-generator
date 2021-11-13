@@ -14,7 +14,7 @@ const App: React.FC = () => {
   useEffect(()=>{
     if(isSaving){
       exportComponentAsJPEG(ref, {
-        fileName:"eu-dei-feat-com-a-dafiti"
+        fileName:"eu-dei-feat-com-a-dafiti.jpg"
       });
       setisSaving(false);
     }
