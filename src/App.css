@@ -38,7 +38,27 @@ main{
   flex-direction: column;
 }
 
-textarea{
+.feat{
+  position: absolute;
+  left: 63%;
+  top: 52%;
+  text-transform: uppercase;
+  color: #FFF;
+  pointer-events: none;
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 1.2em;
+  width: 30%;
+  display: table-cell;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+
+textarea.nameTextarea,
+textarea.timeTextarea{
   position: absolute;
   left: 61%;
   bottom: 49%;
@@ -55,24 +75,36 @@ textarea{
   text-align: left;  
   overflow: hidden;  
 }
-textarea::selection {
+textarea.nameTextarea::selection,
+textarea.timeTextarea::selection {
   background-color: transparent;
 }
 
-textarea:invalid{
+textarea.nameTextarea:invalid,
+textarea.timeTextarea:invalid{
   border:dashed 3px #ff3b3b
 }
-textarea:focus:invalid{
+textarea.nameTextarea:focus:invalid,
+textarea.timeTextarea:focus:invalid{
   border:dashed 3px #ffe23b
 }
 
-textarea:focus:required:valid{
+textarea.nameTextarea:focus:required:valid,
+textarea.timeTextarea:focus:required:valid{
   border:dashed 3px #52ff3b
 }
-textarea:not(:focus):valid{
+textarea.nameTextarea:not(:focus):valid,
+textarea.timeTextarea:not(:focus):valid{
   border:dashed 3px transparent;
 }
 
+textarea.timeTextarea{
+  top: 56%;
+  left: 73%;
+  width: 14%;
+  height: 5%;
+  z-index: 9;
+}
 
 input[type="file"]{
   position: absolute;
@@ -116,16 +148,18 @@ input[type="file"]{
 }
 
 .nameTip,
-.avatarTip{
+.avatarTip,
+.timeTip{
   position: absolute;
   background: #ffe23b;
-  padding: 2px 6px;
   box-sizing: border-box;
   border-radius: 20px;
+  font-size: .9em;
 }
 
 .nameTip:after,
-.avatarTip:after{
+.avatarTip:after,
+.timeTip:after{
   content: '';
   display: block;
   width: 8px;
@@ -139,13 +173,27 @@ input[type="file"]{
 
 .nameTip{
   left: 67%;
-  bottom: 76%
+  bottom: 76%;
+  padding: 2px 6px 6px 6px;
 }
 
 .avatarTip{
   left: 10%;
-  top: 2%
+  top: 2%;
+  padding: 2px 6px 6px 6px;
 }
+
+.timeTip:after{
+  
+  top: -6px
+}
+
+.timeTip{
+  right: 4%;
+  top: 68%;
+  padding: 4px 6px;
+}
+
 
 input[type="file"]:valid ~ .dashedAvatar{
   border:none
@@ -155,11 +203,11 @@ input[type="file"]:valid ~ .avatarTip{
   display: none;
 }
 
-textarea:not(:focus):valid ~ .nameTip{
+textarea.nameTextarea:not(:focus):valid ~ .nameTip{
   display: none;
 }
 
-textarea:not(:focus):valid ~ .nameTip{
+textarea.timeTextarea:not(:focus):valid ~ .timeTip{
   display: none;
 }
   
