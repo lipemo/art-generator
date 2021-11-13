@@ -4,7 +4,7 @@ button{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 2vh;
+  bottom: 4vh;
   cursor: pointer;
   background: #ffe23b;
   border: none;
@@ -18,6 +18,22 @@ button{
 }
 button:active{
   transform: translateX(-50%) scale(.95);
+}
+
+.author{
+  text-align: center;
+  color: #FFF;
+  pointer-events: none;
+  position: absolute;
+  bottom: 1.2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .9em;
+  font-weight: 400;
+}
+.author span{
+  color: #ffe23b;
+  font-weight: 600;
 }
 
 main{

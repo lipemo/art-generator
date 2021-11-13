@@ -2,6 +2,7 @@
   "name": "dafiti-feat-art-generator",
   "version": "1.0.0",
   "description": "This project auto generates dafiti's black friday art to share on social media.",
+  "author": {"name": "Felipe Moreira", "email": "noahmdev@gmail.com", "url": "https://felipemoreira.boomo.com.br/"},
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",

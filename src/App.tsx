@@ -27,6 +27,7 @@ const App: React.FC = () => {
         <FeatBF ref={ref} isSaving={isSaving}/>
       </main>
       <button type="button" onClick={() => saveArt()}>Salvar arte</button>
+      <div className="author">Criado por <span>Felipe Moreira</span> e <span>Raissa Signor</span></div>
     </>
   );
 }
