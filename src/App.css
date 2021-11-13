@@ -29,9 +29,12 @@ main{
   max-width: 600px;
   height: auto;
   max-height: 600px;
-  padding: 20px;
   box-sizing: border-box;
   transition: .2s;
+}
+
+img{
+  text-indent: -999999px; 
 }
 
 .fullName{
@@ -42,6 +45,7 @@ main{
   color: #FFF;
   pointer-events: none;
   font-size: 2.4em;
+  line-height: 1.1em;
   width: 30%;
   display: table-cell;
   display: flex;
@@ -57,17 +61,16 @@ main{
   text-transform: uppercase;
   color: #FFF;
   pointer-events: none;
-  font-size: 1.4em;
+  font-size: 1.5em;
   font-weight: 400;
-  line-height: 1.2em;
-  width: 30%;
+  line-height: 1.3em;
+  width: 28%;
   display: table-cell;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
 }
-
 
 textarea.nameTextarea,
 textarea.timeTextarea{
@@ -87,6 +90,7 @@ textarea.timeTextarea{
   text-align: left;  
   overflow: hidden;  
 }
+
 textarea.nameTextarea::selection,
 textarea.timeTextarea::selection {
   background-color: transparent;
@@ -96,6 +100,7 @@ textarea.nameTextarea:invalid,
 textarea.timeTextarea:invalid{
   border:dashed 3px #ff3b3b
 }
+
 textarea.nameTextarea:focus:invalid,
 textarea.timeTextarea:focus:invalid{
   border:dashed 3px #ffe23b
@@ -105,6 +110,7 @@ textarea.nameTextarea:focus:required:valid,
 textarea.timeTextarea:focus:required:valid{
   border:dashed 3px #52ff3b
 }
+
 textarea.nameTextarea:not(:focus):valid,
 textarea.timeTextarea:not(:focus):valid{
   border:dashed 3px transparent;
@@ -112,7 +118,7 @@ textarea.timeTextarea:not(:focus):valid{
 
 textarea.timeTextarea{
   top: 56%;
-  left: 73%;
+  left: 77%;
   width: 14%;
   height: 5%;
   z-index: 9;
@@ -127,9 +133,7 @@ input[type="file"]{
   height: 69.3%;
   cursor: pointer;
   opacity: 0;
-  
 }
-
 
 .avatar{
   background: url('./assets/avatarDefault.png') center center no-repeat;
@@ -206,7 +210,6 @@ input[type="file"]{
   padding: 4px 6px;
 }
 
-
 input[type="file"]:valid ~ .dashedAvatar{
   border:none
 }
@@ -221,12 +224,12 @@ textarea.nameTextarea:not(:focus):valid ~ .nameTip{
 
 textarea.timeTextarea:not(:focus):valid ~ .timeTip{
   display: none;
-}
-  
+}  
 
 .art{
   width: 100%;
 }
+
 .sArt{  
   position: relative;
   background: #000;
@@ -237,5 +240,17 @@ textarea.timeTextarea:not(:focus):valid ~ .timeTip{
 only screen and (max-width:728px) {
   main {
     width: 90%;
+  }
+  .feat{
+    font-size: 3.4vw;
+  }
+  .fullName{
+    font-size: 5vw;
+  }
+  .nameTip,
+  .avatarTip,
+  .timeTip{
+
+    font-size: 2vw;
   }
 }

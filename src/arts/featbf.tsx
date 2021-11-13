@@ -23,7 +23,7 @@ const FeatBF: React.FC<any> = React.forwardRef((props, ref:any) => {
         <img className="avatar" src={img} alt="Avatar"/>
         <div>{props.fullname}</div>
         <div className="fullName">{fullname}</div>
-        <div className="feat">Eu dei feat com a DFT há {time}</div>
+        <div className="feat">Eu dei feat com<br/>a DFT há {time}</div>
         <img src={dafitiFeatImg} alt="Dafiti Black Friday" className="art" />
       </section>
     </>
