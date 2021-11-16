@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/art-generator/static/css/main.db25aa39.chunk.css",
+    "main.css": "/art-generator/static/css/main.db8b5e16.chunk.css",
     "main.js": "/art-generator/static/js/main.39bcee79.chunk.js",
     "main.js.map": "/art-generator/static/js/main.39bcee79.chunk.js.map",
     "runtime-main.js": "/art-generator/static/js/runtime-main.f42b60a2.js",
@@ -10,7 +10,7 @@
     "static/js/3.71c19a61.chunk.js": "/art-generator/static/js/3.71c19a61.chunk.js",
     "static/js/3.71c19a61.chunk.js.map": "/art-generator/static/js/3.71c19a61.chunk.js.map",
     "index.html": "/art-generator/index.html",
-    "static/css/main.db25aa39.chunk.css.map": "/art-generator/static/css/main.db25aa39.chunk.css.map",
+    "static/css/main.db8b5e16.chunk.css.map": "/art-generator/static/css/main.db8b5e16.chunk.css.map",
     "static/js/2.8be432f9.chunk.js.LICENSE.txt": "/art-generator/static/js/2.8be432f9.chunk.js.LICENSE.txt",
     "static/media/App.css": "/art-generator/static/media/avatarDefault.f878f512.png",
     "static/media/dafitiFeat.8a90f96e.png": "/art-generator/static/media/dafitiFeat.8a90f96e.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.f42b60a2.js",
     "static/js/2.8be432f9.chunk.js",
-    "static/css/main.db25aa39.chunk.css",
+    "static/css/main.db8b5e16.chunk.css",
     "static/js/main.39bcee79.chunk.js"
   ]
 }
